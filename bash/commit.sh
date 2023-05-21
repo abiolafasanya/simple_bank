@@ -13,4 +13,4 @@ read -p "Enter a commit message: " message
 git commit -m "$message"
 
 # Push the commit to the remote branch
-git push upstream
+git push origin main

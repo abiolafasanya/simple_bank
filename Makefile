@@ -21,5 +21,11 @@ migratedown:
 sqlc:
 	sqlc generate
 
+gitpush:
+	echo "Preparing for github deployment..."
+	bash ./bash/commit.sh
 
-.PHONY: postgres createdb dropdbs migrateup migratedown sqlc
+test:
+	go test -v -cover ./...
+
+.PHONY: postgres createdb dropdbs migrateup migratedown sqlc gitpush test
